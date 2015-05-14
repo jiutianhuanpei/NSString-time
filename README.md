@@ -1,7 +1,7 @@
 # NSString-time
 通过 时间戳 按一定的规则返回 字符串
 
-![](https://github.com/jiutianhuanpei/ NSString-time/NSString+time/Images.xcassets/时间无则.imageset/时间无则.png
+![](https://github.com/jiutianhuanpei/NSString-time/NSString+time/Images.xcassets/时间无则.imageset/时间无则.png
 )
 
 ```object
