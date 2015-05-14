@@ -1,8 +1,7 @@
 # NSString-time
 通过 时间戳 按一定的规则返回 字符串
 
-![](https://github.com/jiutianhuanpei/NSString-time/raw/master/时间无则.imageset/时间无则.png
-)
+![](https://github.com/jiutianhuanpei/NSString-time/raw/master/时间无则.imageset/时间无则.png)
 
 ```object
 + (NSString *)timeByTimestamp:(CGFloat)timestamp {
