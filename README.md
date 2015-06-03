@@ -6,10 +6,15 @@
 ```object
 + (NSString *)timeByTimestamp:(CGFloat)timestamp {
     
-    NSTimeZone *zone = [NSTimeZone timeZoneWithName:@"Asia/Chita"];
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd aa h:mm"];
+    NSTimeZone *zone = [NSTimeZone defaultTimeZone];
+   
+    static NSDateFormatter *formatter =nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSDateFormatter alloc] init];
+    });
+    formatter.locale=[[NSLocale alloc]initWithLocaleIdentifier:@"en_US"];
+    [formatter setDateFormat:@"yyyy-MM-dd aa hh:mm"];
     [formatter setTimeZone:zone];
     
     CGFloat thatTime = timestamp;
